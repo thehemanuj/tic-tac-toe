@@ -313,15 +313,7 @@ function check(){
         chance=10;
         document.body.style.backgroundColor="rgb(155, 15, 15)";
         game=0;
-    }
-    else if((f1==2&&f2==2&&f3==2)||(f4==2&&f5==2&&f6==2)||(f7==2&&f8==2&&f9==2)||(f1==2&&f4==2&&f7==2)||(f2==2&&f5==2&&f8==2)||(f3==2&&f6==2&&f9==2)||(f1==2&&f5==2&&f9==2)||(f3==2&&f5==2&&f7==2)){
-        p2++;
-        q.innerText="PLAYER 2:  "+p2.toString();
-        chance=10;
-        document.body.style.backgroundColor="rgb(15, 15, 155)";
-        game=1;
-    }
-    if(p1>p2){
+        if(p1>p2){
         p.style.fontSize="30px";
         p.style.color="gold";
         q.style.fontSize="20px";
@@ -339,6 +331,33 @@ function check(){
         p.innerText=p.innerText+" ⚔️";
         q.innerText=q.innerText+" ⚔️";
     }
+    }
+    else if((f1==2&&f2==2&&f3==2)||(f4==2&&f5==2&&f6==2)||(f7==2&&f8==2&&f9==2)||(f1==2&&f4==2&&f7==2)||(f2==2&&f5==2&&f8==2)||(f3==2&&f6==2&&f9==2)||(f1==2&&f5==2&&f9==2)||(f3==2&&f5==2&&f7==2)){
+        p2++;
+        q.innerText="PLAYER 2:  "+p2.toString();
+        chance=10;
+        document.body.style.backgroundColor="rgb(15, 15, 155)";
+        game=1;
+        if(p1>p2){
+        p.style.fontSize="30px";
+        p.style.color="gold";
+        q.style.fontSize="20px";
+        q.style.color="white";
+        p.innerText=p.innerText+" 👑";
+    }
+    else if(p2>p1){
+        q.style.fontSize="30px";
+        q.style.color="gold";
+        p.style.fontSize="20px";
+        p.style.color="white";
+        q.innerText=q.innerText+" 👑";
+    }
+    else{
+        p.innerText=p.innerText+" ⚔️";
+        q.innerText=q.innerText+" ⚔️";
+    }
+    }
+    
     if(chance%10==0){
         f1=0,f2=0,f3=0,f4=0,f5=0,f6=0,f7=0,f8=0,f9=0;
         a.innerText="";
