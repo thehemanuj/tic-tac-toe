@@ -134,7 +134,7 @@ e.onclick=()=>{
         if(kushal()){
         if(chance%2!=0){
             f5=1;
-            changer(e);
+            changer(e);}
             
         }
         else{
@@ -142,7 +142,6 @@ e.onclick=()=>{
             changer(e);
             
         }
-    }
     else{
         if(kushal()){
             if(chance%2==0){
@@ -159,6 +158,7 @@ e.onclick=()=>{
     }
 }
 }
+
 
 
 f.onclick=()=>{
